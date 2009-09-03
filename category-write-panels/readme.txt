@@ -1,6 +1,6 @@
 === Category Write Panels ===
 Plugin URI: http://www.seo-jerusalem.com/home/seo-friendly-web-development/wordpress-category-write-panels-plugin/
-Version: 1.0
+Version: 1.0.1
 Contributors: R.J. Kaplan, SEO Jerusalem
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7746509
 Tags: write panel, category, custom
@@ -40,3 +40,6 @@ Developers can manipulate write panels individually by getting the current main 
 
 = 1.0 =
 * Initial release.
+
+= 1.0.1 =
+* Fixed issue where all menu items used the same ID, causing validation errors.

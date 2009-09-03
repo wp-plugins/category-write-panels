@@ -3,7 +3,7 @@
 Plugin Name: Category Write Panels
 Plugin URI: http://www.seo-jerusalem.com/home/seo-friendly-web-development/wordpress-category-write-panels-plugin/
 Description: Automaticly creates seperate write and edit panels for each category
-Version: 1.0
+Version: 1.0.1
 Author: SEO Jerusalem
 Author URI: http://www.seo-jerusalem.com
 */
@@ -76,7 +76,7 @@ function cwp_do_panels($hook) {
 			'edit-' . $cat->slug,
 			'',
 			$class,
-			'menu-pages',
+			'menu-pages-' . $cat->slug,
 			'div'			
 		);
 			
