@@ -1,11 +1,11 @@
 === Category Write Panels ===
 Plugin URI: http://www.seo-jerusalem.com/home/seo-friendly-web-development/wordpress-category-write-panels-plugin/
-Version: 1.0.1
+Version: 1.0.2
 Contributors: R.J. Kaplan, SEO Jerusalem
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7746509
 Tags: write panel, category, custom
 Requires at least: 2.8.4
-Tested up to: 2.8.4
+Tested up to: 2.9
 
 Automatically creates separate write and edit panels for each category
 
