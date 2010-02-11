@@ -79,15 +79,18 @@ function cwp_do_panels($hook) {
 			'menu-pages-' . $cat->slug,
 			'div'			
 		);
-			
+		//localization (menu titles)		
+		$edit_title = __('Edit','category_panels');
+		$add_title = __('Add New','category_panels');
+		
 		$submenu['edit-' . $cat->slug][0] = array(
-			'Edit',
+			$edit_title,
 			'edit_posts',
 			'edit.php?cat=' . $cat->term_id
 		);
 			
 		$submenu['edit-' . $cat->slug][1] = array(
-			'Add New',
+			$add_title,
 			'edit_posts',
 			'post-new.php?cat=' . $cat->term_id
 		);			
@@ -114,12 +117,23 @@ function cwp_do_panels($hook) {
 function cwp_postcat() {
 	// figure out what category we are dealing with
 	global $cwp_postcat, $post, $cwp_postcatname, $title;
-	if (is_numeric($_GET['cat'])) {
-		$cwp_postcat = $_GET['cat'];
-	} else {
-		$cwp_postcat = wp_get_post_categories($post->ID);
-		$cwp_postcat = $cwp_postcat[0];
-	}
+       if (is_numeric($_GET['cat'])) {
+               $cwp_postcat = $_GET['cat'];
+       } else {
+               $categories = get_categories();
+               foreach ($categories as $cat) {
+                       if ($cat->category_parent == '0') {
+                               $topcats[] = $cat->term_id;
+                       }
+               }
+               $postcats = wp_get_post_categories($post->ID);
+               foreach ($postcats as $pc) {
+                       if (in_array($pc, $topcats)) {
+                               $cwp_postcat = $pc;
+                               break;
+                       }
+               }
+       }
 	if (empty($cwp_postcat)) {
 		$cwp_postcat = (int) get_option('default_category');
 	}
