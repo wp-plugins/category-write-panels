@@ -1,6 +1,6 @@
 === Category Write Panels ===
 Plugin URI: http://www.seo-jerusalem.com/home/seo-friendly-web-development/wordpress-category-write-panels-plugin/
-Version: 1.0.2
+Version: 1.0.3
 Contributors: R.J. Kaplan, SEO Jerusalem
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7746509
 Tags: write panel, category, custom
